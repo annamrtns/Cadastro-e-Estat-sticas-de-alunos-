@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+union exemplo {
+    int inteiro;
+    float decimal;
+};
+
+int main() {
+    union exemplo u;
+
+    u.inteiro = 42;
+
+    printf("Valor do inteiro: %d\n", u.inteiro);
+    printf("Valor do decimal (interpretação): %.2f\n", u.decimal);
+
+    u.decimal = 3.14;
+
+    printf("\nApós inicializar o decimal:\n");
+    printf("Valor do inteiro (interpretação): %d\n", u.inteiro);
+    printf("Valor do decimal: %.2f\n", u.decimal);
+
+    return 0;
+}
