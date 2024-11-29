@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Enumeração para representar os dias da semana
+enum semana {
+    Domingo = 1,
+    Segunda,
+    Terca,
+    Quarta,
+    Quinta,
+    Sexta,
+    Sabado
+};
+
+int main() {
+    int dia;
+
+    // Leitura do valor inteiro
+    printf("Digite um número de 1 a 7 para o dia da semana: ");
+    scanf("%d", &dia);
+
+    // Exibição do dia correspondente
+    switch (dia) {
+        case Domingo:
+            printf("Dia correspondente: Domingo\n");
+            break;
+        case Segunda:
+            printf("Dia correspondente: Segunda-feira\n");
+            break;
+        case Terca:
+            printf("Dia correspondente: Terça-feira\n");
+            break;
+        case Quarta:
+            printf("Dia correspondente: Quarta-feira\n");
+            break;
+        case Quinta:
+            printf("Dia correspondente: Quinta-feira\n");
+            break;
+        case Sexta:
+            printf("Dia correspondente: Sexta-feira\n");
+            break;
+        case Sabado:
+            printf("Dia correspondente: Sábado\n");
+            break;
+        default:
+            printf("Valor inválido! Digite um número entre 1 e 7.\n");
+    }
+
+    return 0;
+}
